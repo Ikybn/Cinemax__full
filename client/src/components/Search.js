@@ -4,9 +4,9 @@ import React from "react";
 const Search = ({ search, setSearch, searchMovies }) => {
   // On paramètre la fonction hundleSubmit pour récupérer la valeure
   const handleSubmit = (e) => {
-    // On récupère la valeure
+    // On récupère la valeur
     e.preventDefault();
-    // On affecte la valeure à la fonction de recherche
+    // On affecte la valeur à la fonction de recherche
     searchMovies(search);
   };
 

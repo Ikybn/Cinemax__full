@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movies from "../components/Movies";
+import Nav from "../components/Nav";
 
 const Favorites = () => {
   // Ici c'est la liste des favoris
@@ -16,7 +17,7 @@ const Favorites = () => {
    */
   const fetchFavorites = async () => {
     try {
-      const response = await fetch("http://localhost:3002/api/favorites");
+      const response = await fetch("/api/favorites");
       const data = await response.json();
       if (data.favorites) {
         setFavorites(data.favorites);
@@ -71,6 +72,7 @@ const Favorites = () => {
 
   return (
     <>
+      <Nav />
       <h1>Favorites</h1>
       <div>
         <Movies movies={movies} />

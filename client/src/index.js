@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import "./styles.css";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,11 +14,10 @@ const router = createBrowserRouter([
     path: "/favorites",
     element: <Favorites />,
   },
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+      <RouterProvider router={router} />
+  </React.StrictMode>
 );
